@@ -40,10 +40,11 @@ export const addToCart = async (req, res) => {
       res.status(500).json({ message: error.message });
     }
   };
-  
+
   export const removeItemFromCart = async (req, res) => {
     try {
       const { id, userEmail } = req.body;
+      
   
       const updatedCart = await Cart.findOneAndUpdate(
         { userEmail },

@@ -1,7 +1,7 @@
 import express from 'express';
 import { userSignup, userLogin } from '../controller/user-controller.js';
 import { getProducts, getProductById } from '../controller/product-controller.js';
-import { addToCart, getCartItems, removeItemFromCart } from "../controller/cart-controller.js";
+import { addToCart, getCartItems} from "../controller/cart-controller.js";
 
 const router = express.Router();
 
@@ -16,7 +16,7 @@ router.get('/product/:id', getProductById);
 // Cart routes
 router.post("/add", addToCart); 
 router.get("/cart", getCartItems); 
-router.post("/remove", removeItemFromCart); 
+
 
 
 export default router;
